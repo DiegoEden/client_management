@@ -34,7 +34,7 @@ Dashboard_Page::headerTemplate('Administrar clientes');
 
 <!-- Tabla para mostrar los registros existentes -->
 <div class="table-responsive mt-5">
-    <table class="table">
+    <table class="table" id="data-table">
         <thead>
             <tr>
                 <th scope="col">Foto</th>

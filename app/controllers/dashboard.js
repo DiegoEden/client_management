@@ -16,7 +16,7 @@ function fillTable(dataset) {
                 <td>${row.action}</td>
                 <td>${row.created_at}</td>
                 <td>
-                    <button onclick="ShowLogInfo(${row.id})" class="btn btn-warning marginButton"><i class="material-icons">info</i></button>
+                    <button onclick="ShowLogInfo(${row.id})" data-bs-toggle="modal" data-bs-target="#logModal" class="btn btn-warning marginButton"><i class="material-icons">info</i></button>
                 </td>
             </tr>
         `;
@@ -54,3 +54,35 @@ function fillTable(dataset) {
     });
 }
 
+function ShowLogInfo(id) {
+    // Se define un objeto con los datos del registro seleccionado.
+    const data = new FormData();
+    data.append('log_id', id);
+
+    fetch(ENDPOINT_USERS + 'readOneLog', {
+        method: 'post',
+        body: data
+    }).then(function (request) {
+        // Se verifica si la petición es correcta, de lo contrario se muestra un mensaje indicando el problema.
+        if (request.ok) {
+            request.json().then(function (response) {
+                // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
+                if (response.status) {
+                    // Se colocan los datos en la tarjeta de acuerdo al producto seleccionado previamente.
+                    document.getElementById('action').textContent ="Acción: "+response.dataset.action;
+                    document.getElementById('details').textContent ="Detalles: "+ response.dataset.details;
+                    document.getElementById('created_at').textContent ="Fecha: "+ response.dataset.created_at;
+                    document.getElementById('loguser').textContent ="Usuario: "+ response.dataset.username;
+
+
+
+                } else {
+                }
+            });
+        } else {
+            console.log(request.status + ' ' + request.statusText);
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
+}

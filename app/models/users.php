@@ -10,6 +10,7 @@ class Users extends Validator
     private $password = null;
     private $email = null;
     private $verification_code = null;
+    private $log_id = null;
 
 
     //asignando valores y validaciones a los atributos
@@ -69,6 +70,14 @@ class Users extends Validator
         }
     }
 
+    public function setLogId($value){
+        if($this->validateNaturalNumber($value)){
+            $this->log_id = $value;
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     public function getId()
     {
@@ -93,6 +102,10 @@ class Users extends Validator
     public function getVerificationCode()
     {
         return $this->verification_code;
+    }
+
+    public function getLogId(){
+        return $this->log_id;
     }
 
     public function checkUser($username)
@@ -256,6 +269,13 @@ class Users extends Validator
         INNER JOIN users u ON a.user_id = u.id  ORDER BY a.created_at DESC';
         $params = null;
         return Database::getRows($sql, $params);
+    }
+
+    public function readOneLog(){
+        $sql = 'SELECT u.username, a.action, a.details, a.id, a.created_at FROM audit_logs a
+        INNER JOIN users u ON a.user_id = u.id WHERE a.id =?';
+        $params = array($this->log_id);
+        return Database::getRow($sql, $params);
     }
 
 }

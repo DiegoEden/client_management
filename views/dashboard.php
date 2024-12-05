@@ -35,14 +35,16 @@ Dashboard_Page::headerTemplate('Actividad reciente');
             <div class="modal-body">
 
                 <div class="row" style="margin: 10px;">
+
+                    <input type="number" class="d-none" id="log_id" name="log_id">
                     <div class="col-xl-12 col-md-12 col-sm-12 col-xs-12">
-                        <h1 id="username"></h1>
+                        <h4 id="loguser">Hola</h4>
                         <br>
-                        <h3 id="action"></h3>
+                        <h4 id="action"></h4>
                         <br>
-                        <h3 id="details"></h3>
+                        <h4 id="details"></h4>
                         <br>
-                        <h3 id="created_at"></h3>
+                        <h4 id="created_at"></h4>
                         <br>
 
                     </div>
