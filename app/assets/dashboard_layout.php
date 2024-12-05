@@ -72,9 +72,8 @@ class Dashboard_Page
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarNav">
                                     <ul class="navbar-nav ms-auto">
-                                        <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="categorias.php">Categorías</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="usuarios.php">Usuarios</a></li>
+                                        <li class="nav-item"><a class="nav-link" id="dashboard" name="dashboard" href="dashboard.php">Dashboard</a></li>
+                                        <li class="nav-item"><a class="nav-link" id="clients" name="clients" href="clients.php">Clientes</a></li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Cuenta: <b>' . $_SESSION['username'] . '</b>
@@ -162,6 +161,7 @@ class Dashboard_Page
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
                     <script src="../resources/js/sweetalert.min.js"></script>
                     <script src="../resources/js/template.js"></script>
+                    <script src="../resources/js/datatables.min.js"></script>
                     <script src="../app/assets/components.js"></script>
                     <script src="../app/controllers/account.js"></script>
                     <script src="../app/controllers/' . $controller . '"></script>
@@ -171,9 +171,10 @@ class Dashboard_Page
                 $scripts = '
                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-                    <script src="../../resources/js/sweetalert.min.js"></script>
-                    <script src="../../app/helpers/components.js"></script>
-                    <script src="../../app/controllers/dashboard/' . $controller . '"></script>
+                    <script src="../resources/js/sweetalert.min.js"></script>
+                    <script src="../app/assets/components.js"></script>
+                    <script src="../resources/js/datatables.min.js"></script>
+                    <script src="../app/controllers/' . $controller . '"></script>
                 ';
             }
             print('

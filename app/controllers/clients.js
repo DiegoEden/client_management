@@ -20,10 +20,10 @@ function fillTable(dataset) {
                 <td>${row.email}</td>
                 <td>${row.phone_number}</td>
                 <td>
-                    <button onclick="openUpdateDialog(${row.id})" class="btn btn-warning"><i class="material-icons">mode_edit</i></button>
-                    <button onclick="openAddressDialog(${row.id})" class="btn btn-primary"><i class="material-icons">location_on</i></button>
-                    <button onclick="openDocumentDialog(${row.id})" class="btn btn-secondary"><i class="material-icons">description</i></button>
-                    <button onclick="openDeleteDialog(${row.id})" class="btn btn-danger"><i class="material-icons">delete</i></button>
+                    <button onclick="openUpdateDialog(${row.id})" class="btn btn-warning marginButton"><i class="material-icons">mode_edit</i></button>
+                    <button onclick="openAddressDialog(${row.id})" class="btn btn-primary marginButton"><i class="material-icons">location_on</i></button>
+                    <button onclick="openDocumentDialog(${row.id})" class="btn btn-secondary marginButton"><i class="material-icons">description</i></button>
+                    <button onclick="openDeleteDialog(${row.id})" class="btn btn-danger marginButton"><i class="material-icons">delete</i></button>
                 </td>
             </tr>
         `;

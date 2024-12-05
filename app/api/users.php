@@ -98,6 +98,17 @@ if (isset($_GET['action'])) {
                 }
 
                 break;
+            case 'getLogs':
+                if ($result['dataset'] = $user->getLogs()) {
+                    $result['status'] = 1;
+                } else {
+                    if (Database::getException()) {
+                        $result['exception'] = Database::getException();
+                    } else {
+                        //$result['exception'] = 'No hay clientes registrados';
+                    }
+                }
+                break;
             default:
                 $result['exception'] = 'Acción no disponible dentro de la sesión';
         }

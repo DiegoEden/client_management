@@ -251,4 +251,11 @@ class Users extends Validator
     }
 
 
+    public function getLogs(){
+        $sql = 'SELECT u.username, a.action, a.details, a.id, a.created_at FROM audit_logs a
+        INNER JOIN users u ON a.user_id = u.id  ORDER BY a.created_at DESC';
+        $params = null;
+        return Database::getRows($sql, $params);
+    }
+
 }

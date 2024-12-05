@@ -69,7 +69,7 @@ Dashboard_Page::headerTemplate('Administrar clientes');
 
                             </div>
                             <div class="cargarFoto">
-                                <button type="submit" class="btn btnAdd" id="botonFoto" name="c"><i class="material-icons">add</i></button>
+                                <button type="submit" class="btn btnAdd marginButton" id="botonFoto" name="botonFoto"><i class="material-icons">add</i></button>
                             </div>
                             <input type="file" id="photo" name="photo" class="d-none" required>
                         </div>
@@ -92,7 +92,7 @@ Dashboard_Page::headerTemplate('Administrar clientes');
                         </div>
 
                     </div>
-                    <div class="text-center mt-4">
+                    <div class="text-center mt-5">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" id="btnGuardar" id="btnGuardar" class="btn btnAdd">Guardar</button>
                         <button type="submit" id="btnActualizar" name="btnActualizar" class="btn btnAdd">Actualizar</button>

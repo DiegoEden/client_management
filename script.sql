@@ -32,7 +32,6 @@ CREATE TABLE documents(
     client_id BIGINT UNSIGNED,
     document_type VARCHAR(50),
     document_number VARCHAR(50),
-    file_name VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (client_id) REFERENCES clients(id)
 );

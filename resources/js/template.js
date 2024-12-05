@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
+    let current_url = document.location;
+    /*     console.log(current_url);
+     */
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+/*     console.log(page);
+ */    document.querySelectorAll(".nav-link").forEach(function (e) {
+        if (e.href == current_url) {
+            e.classList += " current";
+        }
+        if (page == "clients.php") {
+            document.getElementById('clients').classList.add('current');
+        }
+        if (page == "dasboard.php") {
+            document.getElementById('dashboard').classList.add('current');
+        }
+       
+    });
 
     load();
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
