@@ -1,0 +1,290 @@
+body {
+    font-family: "Forum", serif;
+    background-color: var(--body-color);
+    transition: var(--animation);
+}
+
+/*CSS para navbar*/
+.navbar {
+
+    background-color: var(--color-fondoNav);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 30px;
+    font-size: 18px;
+    color: var(--colorLetra);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+}
+
+
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+
+    color: #8A49B4;
+}
+
+
+
+.navbar-toggler {
+    border: none;
+    transition: .6s;
+
+}
+
+.navbar-toggler:focus {
+
+    border: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);
+}
+
+.navbar-toggler:active {
+
+    border: none;
+}
+
+
+.navbar-toggler-icon {
+    background-image: var(--imgToggle);
+    transition: .6s;
+}
+
+
+#oscuro {
+    color: black;
+    padding-top: 10px;
+    padding-left: 40px;
+
+    border: none;
+}
+
+#oscuro:hover {
+
+    color: gold;
+}
+
+#claro {
+    color: white;
+    padding-top: 10px;
+    padding-left: 40px;
+    border: none;
+}
+
+#claro:hover {
+
+    color: gold;
+}
+
+.dropdown-menu {
+    background-color: var(--color-fondoNav);
+}
+
+.dropdown-item {
+    color: var(--colorLetra);
+}
+
+.dropdown-item:hover {
+
+    background-color: var(--color-fondoNav);
+    color: #8A49B4;
+}
+
+
+.modal-content {
+    background-color: var(--body-color);
+    color: var(--colorLetra);
+}
+
+.btn-close {
+    background-image: url(../img/cross.png);
+    background-size: 25px 25px;
+
+}
+
+.modal-header {
+
+    border-bottom: none;
+}
+
+/*estilos para sweetalert*/
+
+
+.swal-modal {
+
+    background-color: var(--body-color);
+
+}
+
+.swal-title {
+    color: var(--colorLetra);
+}
+
+.swal-text {
+
+    color: var(--colorLetra);
+}
+
+.swal-icon--success::before {
+    background-color: var(--body-color);
+}
+
+.swal-icon--success::after {
+    background-color: var(--body-color);
+}
+
+.swal-icon--success__hide-corners {
+    background-color: var(--body-color);
+}
+
+.swal-button {
+    background-color: rgb(175, 255, 175);
+    color: black;
+    border: none;
+    transition: all 250ms;
+
+}
+
+.swal-button:hover {
+
+    background-color: rgb(63, 209, 63);
+    color: white;
+    transition: all 250ms;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+
+}
+
+.swal-button--confirm {
+
+    background-color: var(--colorLetra);
+    border: none;
+    transition: all 250ms;
+    color: var(--body-color);
+
+}
+
+.swal-button--confirm:hover {
+    background-color: var(--colorLetra);
+    transition: all 250ms;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: #B39D81
+}
+
+.swal-button--confirm:focus {
+    box-shadow: none;
+    border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: var(--colorLetra);
+    transition: var(--animation);
+}
+
+.form-control {
+
+    border-radius: 20px;
+    border: 1px solid var(--colorLetra);
+    background-color: var(--body-color);
+    color: var(--colorLetra);
+    transition: var(--animation);
+}
+
+
+.form-control::-webkit-input-placeholder {
+    color: var(--colorLetra);
+}
+
+.form-control::-moz-placeholder {
+    color: var(--colorLetra);
+
+
+}
+
+.form-control:-ms-input-placeholder {
+    color: var(--colorLetra);
+
+
+}
+
+
+.table-responsive {
+
+    thead {
+
+        td,
+        th {
+            border: 0;
+            color: var(--colorLetra);
+            font-size: 1rem;
+            background-color: var(--body-color);
+            transition: var(--animation);
+        }
+    }
+
+    tr {
+        border-color: transparent;
+        transition: var(--animation);
+
+    }
+
+    td,
+    th {
+        vertical-align: middle;
+        text-align: center;
+        background-color: var(--body-color);
+        color: var(--colorLetra);
+        transition: var(--animation);
+
+
+        &.qty {
+            max-width: 2rem;
+        }
+    }
+}
+
+.responsive-img {
+    max-width: 50%;
+    height: auto;
+}
+
+table {
+
+    transition: var(--animation);
+
+}
+
+.btnAdd {
+
+    background-color: #8A49B4;
+    color: white;
+}
+
+.btnAdd:hover {
+
+    background-color: #73387A;
+    color: white;
+}
+
+label {
+
+    margin-bottom: 1em !important;
+}
+
+.cargarFoto {
+    text-align: center;
+    justify-content: center;
+}
+
+#botonFoto{
+    margin-top :1em;
+
+}
